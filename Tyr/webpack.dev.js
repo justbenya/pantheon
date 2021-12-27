@@ -11,6 +11,7 @@
      liveReload: false,
      port: 4003,
      host: '0.0.0.0',
+     useLocalIp: true,
    },
  });
 

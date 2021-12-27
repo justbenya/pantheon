@@ -45,9 +45,9 @@ export class HomeScreen extends React.PureComponent<IComponentProps> {
   private onStatClick() {
     const {gameConfig} = this.props.state;
     if (gameConfig) {
-      window.open(`${gameConfig.eventStatHost.startsWith('https://')
+      window.open(`${gameConfig.eventStatHost.startsWith('http://')
         ? gameConfig.eventStatHost
-        : 'https://' + gameConfig.eventStatHost}/last/`);
+        : 'http://' + gameConfig.eventStatHost}/last/`);
     }
   }
 

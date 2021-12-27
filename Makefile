@@ -122,11 +122,11 @@ pantheon_run: get_docker_id get_docker_idle_id
 				-d -e LOCAL_USER_ID=$(UID) \
 				-e COVERALLS_REPO_TOKEN=$(COVERALLS_REPO_TOKEN) \
 				-e COVERALLS_RUN_LOCALLY=1 \
-				-p 127.0.0.1:4001:4001 \
-				-p 127.0.0.1:4002:4002 \
-				-p 127.0.0.1:4003:4003 \
-				-p 127.0.0.1:4004:4004 \
-				-p 127.0.0.1:5532:5532 \
+				-p 4001:4001 \
+				-p 4002:4002 \
+				-p 4003:4003 \
+				-p 4004:4004 \
+				-p 5532:5532 \
 				-v `pwd`/Tyr:/var/www/html/Tyr:z \
 				-v `pwd`/Mimir:/var/www/html/Mimir:z \
 				-v `pwd`/Rheda:/var/www/html/Rheda:z \

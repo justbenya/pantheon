@@ -13,10 +13,10 @@ ENV YARN_CACHE_FOLDER   /home/user/.yarn-cache
 ENV COMPOSER_CACHE_DIR  /home/user/.composer-cache
 ENV DB_PORT             5532
 
-ENV MIMIR_URL http://localhost:4001
-ENV RHEDA_URL http://localhost:4002
-ENV TYR_URL   http://localhost:4003
-ENV FREY_URL  http://localhost:4004
+ENV MIMIR_URL http://192.168.1.5:4001
+ENV RHEDA_URL http://192.168.1.5:4002
+ENV TYR_URL   http://192.168.1.5:4003
+ENV FREY_URL  http://192.168.1.5:4004
 
 ENV IS_DOCKER 1
 
