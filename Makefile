@@ -132,6 +132,7 @@ pantheon_run: get_docker_id get_docker_idle_id
 				-v `pwd`/Rheda:/var/www/html/Rheda:z \
 				-v `pwd`/Frey:/var/www/html/Frey:z \
 				-v `pwd`/:/var/www/html/pantheon:z \
+				-v `pwd`/data:/var/lib/postgresql/data:z \
 				--name=pantheondev \
 				pantheondev; \
 		fi \
@@ -154,7 +155,7 @@ stop: pantheon_stop pgadmin_stop
 
 .PHONY: frontdev
 frontdev: get_docker_id
-	@docker exec -it $(RUNNING_DOCKER_ID) sh -c 'cd /var/www/html/pantheon/Tyr && HOME=/home/user gosu user make docker'
+	@docker exec -d $(RUNNING_DOCKER_ID) sh -c 'cd /var/www/html/pantheon/Tyr && HOME=/home/user gosu user make docker'
 
 .PHONY: dev
 dev: run
