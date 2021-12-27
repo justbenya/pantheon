@@ -22,9 +22,9 @@ import {EnvConfig} from "#/envConfig/interface";
 
 export const environment: EnvConfig = {
   production: false,
-  apiUrl: 'http://192.168.1.5:4001',
-  uaUrl: 'http://192.168.1.5:4004',
-  guiUrl: 'http://192.168.1.5:4002',
+  apiUrl: 'http://192.168.1.5:4001/',
+  uaUrl: 'http://192.168.1.5:4004/',
+  guiUrl: 'http://192.168.1.5:4002/',
   guiFix: (src: string) => src.replace('http://localhost:4002', '192.168.1.5:4002'),
   idbTokenKey: 'pantheon_authToken',
   idbIdKey: 'pantheon_currentPersonId',
